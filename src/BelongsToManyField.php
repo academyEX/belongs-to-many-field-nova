@@ -193,7 +193,7 @@ class BelongsToManyField extends Field
             'nullable' => $this->nullable,
             'optionsLabel' => $this->label,
             'trackBy' => $this->trackBy,
-            'panel' => $this->panel,
+            'panel' => $this->panel?->name,
             'prefixComponent' => true,
             'readonly' => $this->isReadonly(app(NovaRequest::class)),
             'required' => $this->isRequired(app(NovaRequest::class)),
