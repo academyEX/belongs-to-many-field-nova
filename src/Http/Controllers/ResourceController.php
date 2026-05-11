@@ -15,7 +15,7 @@ class ResourceController
             ->where('component', 'BelongsToManyField')
             ->where('attribute', $relationship)
             ->first();
-        $query = $field->resourceClass::newModel();
+        $query = $field->resourceClass::newModel()->newQuery();
 
         $queryResult = $field->resourceClass::relatableQuery($request, $query);
 
